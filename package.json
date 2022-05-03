@@ -22,14 +22,62 @@
 		"motivator",
 		"happy"
   ],
-  "main": "./out/extension.js",
+  "main": "./dist/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "motivator.helloWorld",
-        "title": "Hello World"
+    "configuration": {
+      "title": "Motivator Configuration",
+      "properties": {
+        "Motivator.margin": {
+          "type": "number",
+          "default": 1,
+          "description": "Decoration margin from end of line"
+        },
+        "Motivator.fontStyle": {
+          "type": "string",
+          "default": "normal",
+          "enum": [
+            "normal",
+            "italic",
+            "oblique"
+          ],
+          "description": "Decoration font style"
+        },
+        "Motivator.darkColor": {
+          "type": "string",
+          "default": "#7cc36e",
+          "description": "Decoration color for small packages in dark theme"
+        },
+        "Motivator.lightColor": {
+          "type": "string",
+          "default": "#7cc36e",
+          "description": "Decoration color for small packages in light theme"
+        },
+        "Motivator.master": {
+          "type": "string",
+          "default": "#7cc36e",
+          "description": "主人"
+        },
+        "Motivator.textList": {
+          "type" :"array",
+          "default": [
+            "明天的你一定会感激今天那么努力的自己！",
+            "如果累了，可以适当的休息下，要学会劳逸结合！",
+            "所有的惊艳都来自于长久的努力，所有的幸福都源自不懈的坚持。",
+            "成功的唯一秘诀——坚持到最后一分钟。",
+            "没有情调,不懂浪漫,也许这是程序员的一面,但拥有朴实无华的爱是他们的另一面。",
+            "作为一个真正的程序员，首先应该尊重编程，热爱你所写下的程序，他是你的伙伴，而不是工具。",
+            "程序不是年轻的专利，但是，他属于年轻。",
+            "退一步海阔天空，这是一种应有的心境。",
+            "程序员是值得尊敬的，程序员的双手是魔术师的双手，他们把枯燥无味的代码变成了丰富多彩的软件。",
+            "一个人静静坐在电脑面前写代码的感觉，那是什么感觉？那是武林高手闭关修炼的感觉。",
+            "一本好书，就像高级武功秘籍一样，哪怕只是从里面领悟到个一招半势，功力提升起来都是惊人的。",
+            "这个世界几乎不合所有人的梦想。只是有些人可以学会遗忘，有些人却坚持。",
+            "在一条路走的久了，别丢下了自己的激情和梦想，别忘却了曾经的那份执着。",
+            "让那个你暗恋的人去暗恋你！"
+          ]
+        }
       }
-    ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
